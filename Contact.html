@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Service.html">Service</a>
+    </nav>
+    
+    <main>
+        <div class="section">
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out to us through the following contact details:</p>
+            <nav>
+                <a href="https://mail.google.com/mail/u/2/#inbox">brenda.montes2122@gmail.com</a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">aremehmontes21@gmail.com</a>
+            </nav>
+            <p>Or you can check out my social media.</p>
+            <nav>
+                <a href="https://www.pinterest.com/blizethmontes/" target="_blank">Pinterest</a>
+                <a href="https://m.facebook.com/profile.php/?id=100078314050151" target="_blank">Facebook</a>
+            </nav>
+        </div>
+
+        <div class="section">
+            <h2>Contact Form</h2>
+            <p>Use the form below to send us a message:</p>
+            
+            <form action="Contact.html" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="comment" cols="20" rows="4" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+        <div class="map">
+            <img src="map.jpg" id="placeholder">
+        </div>
+    </main>
+
+    <script>
+        var jsonData = {
+            company: "Brenda's Cozy Stitches",
+            location: "123 Main St, Cityville",
+            phone: "(555) 123-4567"
+        };
+
+        var jsonString = JSON.stringify(jsonData);
+
+        console.log(jsonString);
+    </script>
+
+</body>
+</html>

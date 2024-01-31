@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="service.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Shop Here</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Contact.html">Contact Us</a>
+    </nav>
+    
+    <main>
+        <h2>Beanies</h2>
+        <div class="beanie-section">
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat1.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat2.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat3.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Bundles</h2>
+        <div class="bundle-section">
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat4.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat5.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section buy-button-container">
+                <div class="image-container">
+                    <img src="Hat6.jpg" alt="using wrapper" class="toggle-image">
+                    <div class="buy-button">Buy</div>
+                    <div class="buy-menu">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                        <input type="text" placeholder="CVV">
+                        <button onclick="showAddressForm()">Next</button>
+                        <button onclick="closeBuyMenu(this)">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        function showAddressForm() {
+            console.log("Address form will be shown here");
+        }
+
+        function closeBuyMenu(button) {
+            $(button).closest('.buy-menu').css('display', 'none');
+        }
+
+        $(document).ready(function () {
+            $('.toggle-image').on({
+                mouseenter: function () {
+                    $(this).css('filter', 'blur(5px)');
+                },
+                mouseleave: function () {
+                    $(this).css('filter', 'blur(0)');
+                }
+            });
+
+            $('.buy-button').on({
+                mouseenter: function () {
+                    $(this).closest('.image-container').find('.toggle-image').css('filter', 'blur(5px)');
+                },
+                mouseleave: function () {
+                    $(this).closest('.image-container').find('.toggle-image').css('filter', 'blur(0)');
+                },
+                click: function () {
+                    $(this).next('.buy-menu').css('display', 'block');
+                }
+            });
+
+            $('.buy-menu button').on('click', function () {
+                closeBuyMenu(this);
+            });
+        });
+    </script>
+
+</body>
+</html>

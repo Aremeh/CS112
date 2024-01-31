@@ -1,0 +1,128 @@
+* {
+	background-color: #945dcf;
+}
+	
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #287abd;
+}
+
+header {
+	background-color: #945dcf;
+	padding: 20px;
+	text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0d031c;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+
+main {
+	background-color: #945dcf;
+	text-align: center;
+	padding: 20px;
+	color: #fff; 
+}
+
+main img {
+	display: block;
+	margin: 0 auto;
+}
+
+img {
+    max-width: auto;
+    height: 600px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#leftArrow, #rightArrow {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333; 
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+#leftArrow {
+    margin-right: auto;
+}
+
+#rightArrow {
+    margin-left: auto;
+}
+
+.button-container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container:hover .button-container {
+    opacity: 1;
+}
+
+	
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+		
+footer p {
+	background-color: #333;
+	text-align: center;
+}
+
+footer a {
+	background-color: #333;
+	color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#scrollImage {
+	transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#leftArrow {
+    left: 10px; /* Adjust the left distance as needed */
+}
+
+#rightArrow {
+    right: 10px; /* Adjust the right distance as needed */
+}
+

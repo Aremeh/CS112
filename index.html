@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenda's Cozy Stitches</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Brenda's Cozy Stitches</h1>
+        <nav>
+            <a href="Contact.html">Contact Us</a>
+            <a href="Service.html">Service</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <img src="Mom.jpg" alt="Brenda's Cozy Stitches" id="scrollImage">
+            <div class="button-container">
+                <button id="leftArrow" class="arrow-button">&lt;</button>
+                <button id="rightArrow" class="arrow-button">&gt;</button>
+            </div>
+        </div>
+        <p>This is a cozy place where you can find handmade knits and crochet with love.</p>
+    </main>
+
+    <footer>
+        <p>Connect with us:</p>
+        <a href="https://www.pinterest.com/blizethmontes/" target="_blank">Pinterest</a>
+        <a href="https://m.facebook.com/profile.php/?id=100078314050151" target="_blank">Facebook</a>
+    </footer>
+
+    <script>
+    $(document).ready(function() {
+        var imageIndex = 0; 
+        var imageCount = 7;
+
+        function switchImage() {
+            $('#scrollImage').css({
+                'opacity': '0',
+                'transform': 'translateX(-100%)'
+            });
+            setTimeout(function() {
+                if (imageIndex === 0) {
+                    $('#scrollImage').attr('src', 'Mom.jpg').css({
+                        'opacity': '1',
+                        'transform': 'translateX(0)'
+                    });
+                } else {
+                    $('#scrollImage').attr('src', 'Hat' + imageIndex + '.jpg').css({
+                        'opacity': '1',
+                        'transform': 'translateX(0)'
+                    });
+                }
+            }, 500);
+        }
+
+        $('#scrollImage').click(function() {
+            window.location.href = 'Service.html';
+        });
+
+        $('#leftArrow').click(function() {
+            imageIndex = (imageIndex - 1 + imageCount) % imageCount;
+            switchImage();
+        });
+
+        $('#rightArrow').click(function() {
+            imageIndex = (imageIndex + 1) % imageCount;
+            switchImage();
+        });
+
+        $('#leftArrow').css('left', '25%');
+        $('#rightArrow').css('right', '25%');
+    });
+    </script>
+
+</body>
+</html>
